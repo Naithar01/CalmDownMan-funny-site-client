@@ -4,8 +4,8 @@ export type Post = {
   content: number;
   category_id: number;
   author_id: number;
-  created_at: string | Date;
-  updated_at: string | Date;
+  created_at: Date;
+  updated_at: Date;
 };
 
 export const GetMainPagePost = async () => {
