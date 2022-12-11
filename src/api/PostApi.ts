@@ -2,10 +2,20 @@ export type Post = {
   id: number;
   title: string;
   content: number;
-  category_id: number;
-  author_id: number;
+  category: PostList_Category;
+  author: PostList_Author;
   created_at: Date;
   updated_at: Date;
+};
+
+type PostList_Category = {
+  id: number;
+  title: string;
+};
+
+type PostList_Author = {
+  id: number;
+  username: string;
 };
 
 export const GetMainPagePost = async () => {
@@ -20,3 +30,7 @@ export const GetMainPagePost = async () => {
       return data.datas;
     });
 };
+
+export const FindPostByPostIdCategoryTitle = async () => {
+  return await fetch
+}
