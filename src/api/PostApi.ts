@@ -31,6 +31,22 @@ export const GetMainPagePost = async () => {
     });
 };
 
-export const FindPostByPostIdCategoryTitle = async () => {
-  return await fetch
-}
+// Find post / post id / category title
+export const FindPostByPostIdCategoryTitle = async (
+  category: string,
+  postid: string
+) => {
+  return await fetch(`http://localhost:8080/api/post/${category}/${postid}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      return data.data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
