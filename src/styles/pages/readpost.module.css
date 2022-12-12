@@ -47,12 +47,32 @@
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  margin: 20px 0px;
-  padding-bottom: 20px;
+  margin: 10px 0px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
 }
 
 .read_post_item_info_user_info span {
   opacity: 0.6;
   margin-right: 10px;
+  font-size: 14px;
+}
+
+/* view Eye */
+.read_post_item_info_user_info span:nth-child(3) {
+  display: flex;
+  align-items: center;
+}
+
+.read_post_item_info_user_info_author_image {
+  background-image: url("");
+}
+
+.read_post_item_info_user_info_author_image {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  margin-right: 10px;
+  background-position: center;
+  background-size: cover;
 }

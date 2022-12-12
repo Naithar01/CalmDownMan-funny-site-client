@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { GetMainPagePost, Post } from "../api/PostApi";
-import MainPagePostList from "../components/MainPage/PostList";
+import MainPagePostList from "../components/Post/PostList";
 import style from "../styles/pages/main.module.css";
 
 const MainPage = () => {

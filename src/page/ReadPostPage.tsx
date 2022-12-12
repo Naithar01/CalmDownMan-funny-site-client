@@ -1,9 +1,12 @@
 import { useEffect, useState, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { FaEye } from "react-icons/fa";
 import { FindPostByPostIdCategoryTitle, Post } from "../api/PostApi";
 
 import style from "../styles/pages/readpost.module.css";
+
+import author_image from "../assets/post_author_image.jpg";
 
 const ReadPostPage = () => {
   const [post, setPost] = useState<Post>();
@@ -41,8 +44,15 @@ const ReadPostPage = () => {
                 <span>{post.title}</span>
               </header>
               <div className={style.read_post_item_info_user_info}>
+                <div
+                  className={style.read_post_item_info_user_info_author_image}
+                  style={{ backgroundImage: `url(${author_image})` }}
+                ></div>
                 <span>{post.author.username}</span>
                 <span>{new Date(post.created_at).toLocaleString()}</span>
+                <span>
+                  <FaEye /> {post.view}
+                </span>
               </div>
             </div>
             {/* Post Content */}

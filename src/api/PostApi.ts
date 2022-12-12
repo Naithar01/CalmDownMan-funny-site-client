@@ -2,6 +2,7 @@ export type Post = {
   id: number;
   title: string;
   content: number;
+  view: number;
   category: PostList_Category;
   author: PostList_Author;
   created_at: Date;
@@ -28,6 +29,9 @@ export const GetMainPagePost = async () => {
     .then((response) => response.json())
     .then((data) => {
       return data.datas;
+    })
+    .catch((err) => {
+      console.log(err);
     });
 };
 
@@ -45,6 +49,22 @@ export const FindPostByPostIdCategoryTitle = async (
     .then((response) => response.json())
     .then((data) => {
       return data.data;
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
+export const FindPostByCategory = async (category: string) => {
+  return await fetch(`http://localhost:8080/api/post/${category}`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      return data.datas;
     })
     .catch((err) => {
       console.log(err);
