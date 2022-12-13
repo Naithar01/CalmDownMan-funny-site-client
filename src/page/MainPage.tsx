@@ -12,7 +12,6 @@ const MainPage = () => {
 
   const GetPosts = async () => {
     const datas: Post[] = await GetMainPagePost();
-
     setPosts(datas);
   };
 
@@ -32,7 +31,6 @@ const MainPage = () => {
         {/* Post List */}
         <section className={style.main_page_list_post_list}>
           {posts &&
-            posts.length &&
             posts.map((post) => <MainPagePostList key={post.id} post={post} />)}
         </section>
       </section>

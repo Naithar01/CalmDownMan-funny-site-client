@@ -2,12 +2,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  margin: 0px 10px;
+  padding: 0px 10px;
 }
 
 .main_page_list {
-  width: 960px;
+  width: 100%;
 }
 
 .main_page_list_title {
