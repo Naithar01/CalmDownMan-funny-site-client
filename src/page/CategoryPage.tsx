@@ -1,6 +1,8 @@
 import { useEffect, useState, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import { FindPostByCategory, Post } from "../api/PostApi";
+import MainPagePostList from "../components/Post/PostList";
+import style from "../styles/pages/category.module.css";
 
 const CategoryPostList = () => {
   const { category } = useParams();
@@ -19,14 +21,12 @@ const CategoryPostList = () => {
   }, [GetPost]);
 
   return (
-    <div>
-      Page Name = {category}
-      <br />
-      <hr />
-      {post?.length}
-      <br />
-      <hr />
-      {JSON.stringify(post)}
+    <div className={style.page}>
+      <div className={style.title}>{category}</div>
+      <div className={style.content}>
+        {post &&
+          post?.map((post) => <MainPagePostList key={post.id} post={post} />)}
+      </div>
     </div>
   );
 };

@@ -1,0 +1,14 @@
+.page {
+  padding: 0px 10px;
+}
+
+.title {
+  margin: 20px 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.content a {
+  color: black;
+  text-decoration: none;
+}

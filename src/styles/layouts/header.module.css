@@ -70,6 +70,7 @@
 
   .header_list li a,
   .report_menu a {
+    display: flex;
     color: white;
     font-weight: bold;
   }
@@ -177,15 +178,18 @@
   }
 
   .header_list_mypage li {
-    padding: 10px;
     margin: 0px 10px;
     border: 1px solid rgb(0 0 0 / 20%);
     text-align: center;
   }
 
   .header_list_mypage li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
     text-decoration: none;
+    padding: 10px;
   }
 
   .header_list {

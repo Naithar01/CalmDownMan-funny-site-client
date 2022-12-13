@@ -17,7 +17,6 @@ const MainPage = () => {
 
   return (
     <main className={style.main_page}>
-      <section className="left"></section>
       <section className={style.main_page_list}>
         {/* Title */}
         <section className={style.main_page_list_title}>
